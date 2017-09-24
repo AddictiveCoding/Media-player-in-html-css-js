@@ -1,0 +1,156 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background: #323533;
+            background: linear-gradient(to right, rgb(252, 255, 98), rgba(255, 255, 255, 0.88));
+        }
+        
+        p {
+            background-color: rgb(135, 206, 235);
+        }
+        
+        .musicplayer {
+            margin: 200px auto;
+            background-image: url("1.png");
+            box-shadow: 9px 7px 37px -6px rgba(14, 8, 1, 0.75);
+            overflow: hidden;
+            position: relative;
+            left: 0px;
+            bottom: 180px;
+            width: 710px;
+            height: 400px;
+        }
+        
+        p {
+            background-color: rgba(158, 158, 158, 0.3);
+            font-family: Florence, cursive;
+            color: #925115;
+            text-shadow: 5px 2px 4px grey;
+        }
+        
+        .button {
+            display: block;
+            width: 55px;
+            height: 25px;
+            background: #925115;
+            position: relative;
+            left: 640px;
+            top: -350px;
+            text-align: center;
+            color: white;
+            font-family: Florence, cursive;
+        }
+        
+        .button2 {
+            display: block;
+            width: 40px;
+            height: 25px;
+            background: #925115;
+            position: relative;
+            left: 841px;
+            top: -375px;
+            text-align: center;
+            color: white;
+            font-family: Florence, cursive;
+        }
+        
+        .button3 {
+            display: block;
+            width: 40px;
+            height: 25px;
+            background: #925115;
+            position: relative;
+            left: 340px;
+            top: -437px;
+            text-align: center;
+            color: white;
+            font-family: Florence, cursive;
+        }
+        
+        .button4 {
+            display: block;
+            width: 40px;
+            height: 25px;
+            background: #925115;
+            position: relative;
+            left: 450px;
+            top: -472px;
+            text-align: center;
+            color: #080202;
+            font-family: Florence, cursive;
+        }
+        
+        .button5 {
+            display: block;
+            width: 40px;
+            height: 25px;
+            background: #925115;
+            position: relative;
+            left: 750px;
+            top: -437px;
+            text-align: center;
+            color: #080202;
+            font-family: Florence, cursive;
+        }
+    </style>
+
+    <title>MY MEDIA PLAYER</title>
+</head>
+
+<body>
+    <h2>
+        <p align="center">PLAYING NOW<br>JEENA JEENA<br>Atif Aslam[www.gaana.com]</p>
+    </h2>
+    <div class="musicplayer"></div>
+    <!---<h3><a href="http://gaana.com/song/jeena-jeena" class="button"><b>&#9658;</b></a></h3>
+    <h3><a href="http://gaana.com/song/tu-chahiye" class="button2"><b>>></b></a></h3>
+    <h3><a href="http://gaana.com/song/tere-sang-yaara" class="button3"><b><<</b></a></h3>
+    <h3>
+        <class="button4"><b><</b></class>
+    </h3>
+    <h3>
+        <class="button5"><b>></b></class>
+    </h3>-->
+    <button onclick="playAudio()" class="button" type="button">
+        ►</button>
+    <button onclick="pauseAudio()" class="button2" type="button">||
+        </button><br>
+    <audio id="myAudio" width="500" height="260">
+        <source src="Song1.mp3" type="Audio/mp3">
+        <source src="Song1.ogg" type="Audio/ogg">
+       
+        </audio>
+
+    <script>
+        var vid = document.getElementById("myAudio");
+
+        function playAudio() {
+            vid.play();
+        }
+
+        function pauseAudio() {
+            vid.pause();
+            audio2.pause();
+        }
+    </script><br><br><br>
+    <button onclick="playAudio2()" class="button4" type="button"><<
+        </button>
+    <audio id="myAudio2">
+            <source src="Song2.mp3" type="Audio/mp3">
+            <source src="Song2.ogg" type="Audio/ogg">
+
+        </audio>
+    <script>
+        var audio2 = document.getElementById("myAudio2");
+
+        function playAudio2() {
+            audio2.play();
+            vid.pause();
+        }
+    </script>
+    <hr id="last"> &copy;
+</body>
+
+</html>
